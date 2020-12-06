@@ -1,39 +1,23 @@
 package com.maideniles.maidensmerrymaking.blocks.crop;
 
-import java.util.Random;
+
 
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.IFluidState;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.tags.FluidTags;
+
 import net.minecraft.util.*;
-import net.minecraft.util.math.AxisAlignedBB;
+
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.RayTraceResult;
+
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.BlockStateContainer;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.ForgeHooks;
-import com.maideniles.maidensmerrymaking.init.ModBlocks;
-import com.maideniles.maidensmerrymaking.init.ModItems;
+
+import net.minecraftforge.common.IPlantable;
 
 
-public class ChristmasTreeCropBlockBottom extends BushBlock {
+public class ChristmasTreeCropBlockBottom extends BushBlock implements IPlantable {
 
     protected static final VoxelShape SHAPE = Block.makeCuboidShape(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
 
@@ -54,16 +38,15 @@ public class ChristmasTreeCropBlockBottom extends BushBlock {
     public boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
         Block block = state.getBlock();
 
-        if (block == Blocks.AIR || block == Blocks.WATER || block == Blocks.ICE
-                || block == Blocks.PACKED_ICE || block == Blocks.FROSTED_ICE)
+        if ( block !=Blocks.GRASS_BLOCK||block !=Blocks.DIRT||block !=Blocks.COARSE_DIRT||block !=Blocks.PODZOL) {
 
+            return false;
+        }
+        else
 
-        return false;
-
-    else{
-              return block==Blocks.GRASS_BLOCK||block==Blocks.DIRT||block==Blocks.COARSE_DIRT||block==Blocks.PODZOL;
+            return true;
             }
-    }
+
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         BlockPos blockpos = pos.down();
@@ -84,4 +67,6 @@ public class ChristmasTreeCropBlockBottom extends BushBlock {
     public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
         return false;
     }
+
+
 }

@@ -37,11 +37,11 @@ public class  ChristmasPineTree extends AbstractTreeFeature<NoFeatureConfig> {
 
         placeLogAt(changedBlocks, worldIn, position.down(i), box);
 
-
-          this.setBlockState(worldIn, position.add(i + 0, j + 0, k + 0), ModBlocks.TREE.get().getDefaultState());
-        this.setBlockState(worldIn, position.add(i + 0, j + 1, k + 0), ModBlocks.TREE_MIDDLE.get().getDefaultState());
-        this.setBlockState(worldIn, position.add(i + 0, j + 2, k + 0), ModBlocks.TREE_TOP.get().getDefaultState());
-
+if( !isWater(worldIn, position.down() ) ) {
+    this.setBlockState(worldIn, position.add(i + 0, j + 0, k + 0), ModBlocks.TREE.get().getDefaultState());
+    this.setBlockState(worldIn, position.add(i + 0, j + 1, k + 0), ModBlocks.TREE_MIDDLE.get().getDefaultState());
+    this.setBlockState(worldIn, position.add(i + 0, j + 2, k + 0), ModBlocks.TREE_TOP.get().getDefaultState());
+}
         return true;
     }
 
@@ -86,7 +86,14 @@ public class  ChristmasPineTree extends AbstractTreeFeature<NoFeatureConfig> {
     protected static boolean isDirtOrGrassBlockOrFarmland(IWorldGenerationBaseReader worldIn, BlockPos pos) {
         return worldIn.hasBlockState(pos, (p_214586_0_) -> {
             Block block = p_214586_0_.getBlock();
-            return Block.isDirt(block) || block == Blocks.GRASS_BLOCK  || block == Blocks.PODZOL;
+
+            if ( block !=Blocks.GRASS_BLOCK||block !=Blocks.DIRT||block !=Blocks.COARSE_DIRT||block !=Blocks.PODZOL) {
+
+                return false;
+            }
+else
+
+            return true;
         });
     }
 

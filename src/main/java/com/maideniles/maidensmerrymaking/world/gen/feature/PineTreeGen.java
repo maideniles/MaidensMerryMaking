@@ -6,7 +6,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.IFeatureConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.registries.ForgeRegistries;
+
 
 public class PineTreeGen {
 
@@ -21,7 +21,7 @@ public class PineTreeGen {
                                 ModFeatures .PINE_TREE,
                                 IFeatureConfig.NO_FEATURE_CONFIG,
                                 Placement.COUNT_EXTRA_HEIGHTMAP,
-                                new AtSurfaceWithExtraConfig(1, 0, 0))
+                                new AtSurfaceWithExtraConfig(0, 2, 1))
                 );
             }
         }
