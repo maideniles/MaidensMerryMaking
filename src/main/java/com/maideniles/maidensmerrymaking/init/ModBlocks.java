@@ -2,6 +2,7 @@ package com.maideniles.maidensmerrymaking.init;
 
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.CustomDoorBlock;
+import com.maideniles.maidensmerrymaking.blocks.FirePlace;
 import com.maideniles.maidensmerrymaking.blocks.deco.WreathBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeTopBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeMiddleBlock;
@@ -167,4 +168,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BirchWreathLightsMultiDoor = createBlock("birch_wreath_lights_multi_door",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> FIREPLACE = createBlock("fire_place",
+            () -> new FirePlace(Block.Properties.from(Blocks.CAMPFIRE).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 }
