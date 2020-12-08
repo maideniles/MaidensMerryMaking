@@ -1,17 +1,9 @@
 package com.maideniles.maidensmerrymaking;
 
-import com.maideniles.maidensmerrymaking.init.BiomeInit;
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
-import com.maideniles.maidensmerrymaking.init.ModFeatures;
 import com.maideniles.maidensmerrymaking.init.ModItems;
-import com.maideniles.maidensmerrymaking.world.gen.feature.PineTreeGen;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.IFeatureConfig;
-import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
-import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

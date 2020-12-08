@@ -1,0 +1,44 @@
+{
+
+"itemGroup.maidens_blocks": "MerryMaking Blocks Tab",
+"itemGroup.maidens_items": "MerryMaking Items Tab",
+
+
+"item.maidensmerrymaking.christmas_tree": "Christmas Tree",
+"item.maidensmerrymaking.christmas_tree_white_lights": "Christmas Tree Lights White",
+"item.maidensmerrymaking.christmas_tree_multi_lights": "Christmas Tree Lights Multi",
+
+"block.maidensmerrymaking.christmas_tree_stand": "Tree Stand",
+
+"block.maidensmerrymaking.christmas_wreath": "Wreath",
+"block.maidensmerrymaking.christmas_wreath_white_lights": "Wreath White Lights",
+"block.maidensmerrymaking.christmas_wreath_multi_lights": "Wreath Multi Lights",
+
+"block.maidensmerrymaking.acacia_wreath_door": "Acacia Wreath Door",
+"block.maidensmerrymaking.birch_wreath_door": "Birch Wreath Door",
+"block.maidensmerrymaking.oak_wreath_door": "Oak Wreath Door",
+"block.maidensmerrymaking.dark_oak_wreath_door": "Dark Oak Wreath Door",
+"block.maidensmerrymaking.spruce_wreath_door": "Spruce Wreath Door",
+"block.maidensmerrymaking.jungle_wreath_door": "Jungle Wreath Door",
+
+"block.maidensmerrymaking.acacia_wreath_lights_white_door": "Acacia Wreath White Lights Door",
+"block.maidensmerrymaking.birch_wreath_lights_white_door": "Birch Wreath White Lights Door",
+"block.maidensmerrymaking.oak_wreath_lights_white_door": "Oak Wreath Door",
+"block.maidensmerrymaking.dark_oak_wreath_lights_white_door": "Dark Oak Wreath White Lights  Door",
+"block.maidensmerrymaking.spruce_wreath_lights_white_door": "Spruce Wreath White Lights Door",
+"block.maidensmerrymaking.jungle_wreath_lights_white_door": "Jungle Wreath White Lights Door",
+
+"block.maidensmerrymaking.acacia_wreath_lights_multi_door": "Acacia Wreath Multi Lights Door",
+"block.maidensmerrymaking.birch_wreath_lights_multi_door": "Birch Wreath Multi Lights Door",
+"block.maidensmerrymaking.oak_wreath_lights_multi_door": "Oak Wreath Multi Lights Door",
+"block.maidensmerrymaking.dark_oak_wreath_lights_multi_door": "Dark Oak Wreath Multi Lights  Door",
+"block.maidensmerrymaking.spruce_wreath_lights_multi_door": "Spruce Wreath Multi Lights Door",
+"block.maidensmerrymaking.jungle_wreath_lights_multi_door": "Jungle Wreath Multi Lights Door"
+
+
+
+
+
+
+
+}
