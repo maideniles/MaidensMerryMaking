@@ -7,6 +7,7 @@
 "item.maidensmerrymaking.christmas_tree": "Christmas Tree",
 "item.maidensmerrymaking.christmas_tree_white_lights": "Christmas Tree Lights White",
 "item.maidensmerrymaking.christmas_tree_multi_lights": "Christmas Tree Lights Multi",
+"item.maidensmerrymaking.christmas_stocking": "Christmas Stocking",
 
 "block.maidensmerrymaking.christmas_tree_stand": "Tree Stand",
 
@@ -33,7 +34,14 @@
 "block.maidensmerrymaking.oak_wreath_lights_multi_door": "Oak Wreath Multi Lights Door",
 "block.maidensmerrymaking.dark_oak_wreath_lights_multi_door": "Dark Oak Wreath Multi Lights  Door",
 "block.maidensmerrymaking.spruce_wreath_lights_multi_door": "Spruce Wreath Multi Lights Door",
-"block.maidensmerrymaking.jungle_wreath_lights_multi_door": "Jungle Wreath Multi Lights Door"
+"block.maidensmerrymaking.jungle_wreath_lights_multi_door": "Jungle Wreath Multi Lights Door",
+
+"block.maidensmerrymaking.fireplace_logs": "Fireplace Logs",
+"block.maidensmerrymaking.fireplace_logs_on": "Fireplace Logs Burning",
+"block.maidensmerrymaking.fireplace_logs_burned": "Fireplace Logs Burned",
+
+"block.maidensmerrymaking.mantel_normal": "Single Fireplace Mantel",
+"block.maidensmerrymaking.mantel_double": "Double Fireplace Mantel"
 
 
 

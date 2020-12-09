@@ -1,0 +1,11 @@
+{
+"variants": {
+	
+
+	"facing=north": {"model": "maidensmerrymaking:block/fireplace_logs", "y": 270},
+	"facing=south": { "model": "maidensmerrymaking:block/fireplace_logs", "y": 90},
+	"facing=east": { "model": "maidensmerrymaking:block/fireplace_logs"},
+	"facing=west": { "model": "maidensmerrymaking:block/fireplace_logs", "y": 180}
+	
+	}
+}

@@ -2,8 +2,12 @@ package com.maideniles.maidensmerrymaking.init;
 
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.CustomDoorBlock;
-import com.maideniles.maidensmerrymaking.blocks.FirePlace;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.Fireplace;
 import com.maideniles.maidensmerrymaking.blocks.deco.WreathBlock;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceBurned;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceBurning;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.FireplaceMantel;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.wide.FireplaceMantelDouble;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeTopBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeMiddleBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeBottomBlock;
@@ -169,6 +173,27 @@ public class ModBlocks {
     public static final RegistryObject<Block> BirchWreathLightsMultiDoor = createBlock("birch_wreath_lights_multi_door",
             () -> new CustomDoorBlock(Block.Properties.from(Blocks.OAK_DOOR).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
-    public static final RegistryObject<Block> FIREPLACE = createBlock("fire_place",
-            () -> new FirePlace(Block.Properties.from(Blocks.CAMPFIRE).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //FIREPLACE LOGS//
+    public static final RegistryObject<Block> FIREPLACE_LOGS = createBlock("fireplace_logs",
+            () -> new Fireplace(Block.Properties.from(Blocks.CAMPFIRE).lightValue(0)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> FIREPLACE_LOGS_BURNING = createBlock("fireplace_logs_on",
+            () -> new FireplaceBurning(Block.Properties.from(Blocks.CAMPFIRE).lightValue(10)), null);
+
+    public static final RegistryObject<Block> FIREPLACE_LOGS_BURNED = createBlock("fireplace_logs_burned",
+            () -> new FireplaceBurned(Block.Properties.from(Blocks.CAMPFIRE).lightValue(0)), null);
+
+//FIREPLACE MANTEL//
+
+    public static final RegistryObject<Block>   MANTEL_NORMAL = createBlock("mantel_normal",
+            () -> new FireplaceMantel(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MANTEL_DOUBLE = createBlock("mantel_double",
+            () -> new FireplaceMantelDouble(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+
 }
