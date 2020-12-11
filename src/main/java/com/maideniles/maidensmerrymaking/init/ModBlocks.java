@@ -7,6 +7,7 @@ import com.maideniles.maidensmerrymaking.blocks.deco.WreathBlock;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceBurned;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceBurning;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.FireplaceMantel;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.single.*;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.wide.FireplaceMantelDouble;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeTopBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeMiddleBlock;
@@ -187,13 +188,34 @@ public class ModBlocks {
 //FIREPLACE MANTEL//
 
     public static final RegistryObject<Block>   MANTEL_NORMAL = createBlock("mantel_normal",
-            () -> new FireplaceMantel(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
+            () -> new MantelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
                     .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   MANTEL_DOUBLE = createBlock("mantel_double",
             () -> new FireplaceMantelDouble(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
                     .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    //ACTUAL MANTEL BLOCKS//
+
+    public static final RegistryObject<Block>   MANTEL_TOP_LEFT = createBlock("mantel_top_left",
+            () -> new MantelTopLeft(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+
+    public static final RegistryObject<Block>   MANTEL_TOP_RIGHT = createBlock("mantel_top_right",
+            () -> new MantelTopRight(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+
+    public static final RegistryObject<Block>   MANTEL_TOP_MIDDLE = createBlock("mantel_top_middle",
+            () -> new MantelTopCenter(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+
+    public static final RegistryObject<Block>   MANTEL_LEG_RIGHT = createBlock("mantel_leg_right",
+            () -> new MantelLegRight(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+
+    public static final RegistryObject<Block>   MANTEL_LEG_LEFT = createBlock("mantel_leg_left",
+            () -> new MantelLegLeft(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
 
 
 }

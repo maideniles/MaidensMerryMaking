@@ -27,12 +27,39 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.Map;
 public abstract class HorizontalDecoBlock extends Block
 {
+
+    protected static final VoxelShape WEST_AABB = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 8.0D, 8.0D, 16.0D);
+    protected static final VoxelShape EAST_AABB = Block.makeCuboidShape(8.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);
+    protected static final VoxelShape NORTH_AABB = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 8.0D);
+    protected static final VoxelShape SOUTH_AABB = Block.makeCuboidShape(0.0D, 0.0D, 8.0D, 16.0D, 8.0D, 16.0D);
+
     public static final DirectionProperty DIRECTION = BlockStateProperties.HORIZONTAL_FACING;
 
     public HorizontalDecoBlock(Properties properties)
     {
         super(properties);
     }
+
+
+    public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
+
+
+        switch(state.get(DIRECTION)) {
+            case SOUTH:
+                return SOUTH_AABB;
+            case NORTH:
+            default:
+                return NORTH_AABB;
+            case WEST:
+                return WEST_AABB;
+            case EAST:
+                return EAST_AABB;
+        }
+    }
+
+
+
+
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context)
@@ -65,7 +92,13 @@ public abstract class HorizontalDecoBlock extends Block
     }
 
     public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.CUTOUT;
+        return BlockRenderLayer.CUTOUT_MIPPED;
     }
+
+    public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+        return true;
+    }
+
+
 
 }

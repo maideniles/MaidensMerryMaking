@@ -19,10 +19,10 @@ public class WreathBlock extends HorizontalDecoBlock{
     public WreathBlock(Properties properties) {
         super(properties);
     }
-
+@Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
 
-        switch((Direction)state.get(DIRECTION)) {
+        switch(state.get(DIRECTION)) {
             case SOUTH:
                 return SOUTH_AABB;
             case NORTH:
