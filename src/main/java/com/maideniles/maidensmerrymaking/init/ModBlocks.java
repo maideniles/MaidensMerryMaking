@@ -2,13 +2,21 @@ package com.maideniles.maidensmerrymaking.init;
 
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.CustomDoorBlock;
+import com.maideniles.maidensmerrymaking.blocks.deco.GarlandBlock;
+import com.maideniles.maidensmerrymaking.blocks.deco.MantelDecoBlock;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.Fireplace;
 import com.maideniles.maidensmerrymaking.blocks.deco.WreathBlock;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceBurned;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceBurning;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.FireplaceMantel;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.single.*;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.stocking.MantelTopCenterWithStocking;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.stocking.MantelTopLeftWithStocking;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.stocking.MantelTopRightWithStocking;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.wide.FireplaceMantelDouble;
+import com.maideniles.maidensmerrymaking.blocks.lamppost.LampPost;
+import com.maideniles.maidensmerrymaking.blocks.lamppost.LampPostBottom;
+import com.maideniles.maidensmerrymaking.blocks.lamppost.LampPostPole;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeTopBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeMiddleBlock;
 import com.maideniles.maidensmerrymaking.blocks.tree.ChristmasTreeBottomBlock;
@@ -39,7 +47,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS,
             MaidensMerryMaking.MODID);
 
-    public static final List<Block> GRASS = new ArrayList<Block>();
+    public static List<Block> validBlocks = new ArrayList<>();
 
     private static <B extends Block> RegistryObject<B> createBlockWithItem(String name, Supplier<? extends B> supplier, Supplier<BlockItem> item) {
         ModItems.ITEMS.register(name, item);
@@ -190,32 +198,103 @@ public class ModBlocks {
     public static final RegistryObject<Block>   MANTEL_NORMAL = createBlock("mantel_normal",
             () -> new MantelBlock(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
                     .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
-
+/*
     public static final RegistryObject<Block>   MANTEL_DOUBLE = createBlock("mantel_double",
             () -> new FireplaceMantelDouble(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0F, 2.0F)
                     .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
-
+*/
     //ACTUAL MANTEL BLOCKS//
 
     public static final RegistryObject<Block>   MANTEL_TOP_LEFT = createBlock("mantel_top_left",
-            () -> new MantelTopLeft(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
-                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+            () -> new MantelTopLeft(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
 
     public static final RegistryObject<Block>   MANTEL_TOP_RIGHT = createBlock("mantel_top_right",
-            () -> new MantelTopRight(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
-                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+            () -> new MantelTopRight(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
 
     public static final RegistryObject<Block>   MANTEL_TOP_MIDDLE = createBlock("mantel_top_middle",
-            () -> new MantelTopCenter(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
-                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+            () -> new MantelTopCenter(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
 
     public static final RegistryObject<Block>   MANTEL_LEG_RIGHT = createBlock("mantel_leg_right",
-            () -> new MantelLegRight(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
-                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+            () -> new MantelLegRight(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
 
     public static final RegistryObject<Block>   MANTEL_LEG_LEFT = createBlock("mantel_leg_left",
-            () -> new MantelLegLeft(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
-                    .harvestLevel(1).lightValue(10).sound(SoundType.PLANT)) , null);
+            () -> new MantelLegLeft(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
+
+    //MANTEL WITH STOCKING BLOCKS//
+    public static final RegistryObject<Block>   MANTEL_TOP_LEFT_STOCKING = createBlock("mantel_top_left_stocking",
+            () -> new MantelTopLeftWithStocking(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
+
+    public static final RegistryObject<Block>   MANTEL_TOP_RIGHT_STOCKING = createBlock("mantel_top_right_stocking",
+            () -> new MantelTopRightWithStocking(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
+
+    public static final RegistryObject<Block>   MANTEL_TOP_MIDDLE_STOCKING = createBlock("mantel_top_middle_stocking",
+            () -> new MantelTopCenterWithStocking(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , null);
 
 
+    //LAMP POSTS//
+
+    public static final RegistryObject<Block>   LAMP_POST = createBlock("lamp_post",
+            () -> new LampPost(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.LANTERN).lightValue(10)) , null);
+
+    public static final RegistryObject<Block>   LAMP_POST_ON = createBlock("lamp_post_on",
+            () -> new LampPost(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.LANTERN)) , null);
+
+    public static final RegistryObject<Block>   LAMP_POST_POLE = createBlock("lamp_post_pole",
+            () -> new LampPostPole(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.LANTERN)) , null);
+
+    public static final RegistryObject<Block>   LAMP_POST_BOTTOM = createBlock("lamp_post_bottom",
+            () -> new LampPostBottom(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.LANTERN)) , null);
+
+    //GARLAND BLOCKS//
+
+    public static final RegistryObject<Block>   GARLAND_HORIZONTAL = createBlock("garland_horizontal",
+            () -> new GarlandBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.PLANT)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_HORIZONTAL_LIGHTS_WHITE = createBlock("garland_horizontal_lights_white",
+            () -> new GarlandBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.PLANT)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_HORIZONTAL_LIGHTS_MULTI = createBlock("garland_horizontal_lights_multi",
+            () -> new GarlandBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.PLANT)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    //MANTEL DECO//
+
+    public static final RegistryObject<Block>   MANTEL_DECO = createBlock("mantel_deco",
+            () -> new MantelDecoBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MANTEL_DECO_1 = createBlock("mantel_deco_1",
+            () -> new MantelDecoBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MANTEL_DECO_2 = createBlock("mantel_deco_2",
+            () -> new MantelDecoBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MANTEL_DECO_3 = createBlock("mantel_deco_3",
+            () -> new MantelDecoBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MANTEL_DECO_4 = createBlock("mantel_deco_4",
+            () -> new MantelDecoBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MANTEL_DECO_5 = createBlock("mantel_deco_5",
+            () -> new MantelDecoBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F)
+                    .harvestLevel(1).sound(SoundType.WOOD)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 }

@@ -1,4 +1,4 @@
-package com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.single;
+package com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.stocking;
 
 import com.maideniles.maidensmerrymaking.blocks.deco.HorizontalDecoBlock;
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
@@ -10,21 +10,19 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
-public class MantelTopCenter extends HorizontalDecoBlock {
+public class MantelTopCenterWithStocking extends HorizontalDecoBlock {
     protected static final VoxelShape WEST_AABB = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 9.0D, 16.0D, 16.0D);
     protected static final VoxelShape EAST_AABB = Block.makeCuboidShape(7.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     protected static final VoxelShape NORTH_AABB = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 9.0D);
     protected static final VoxelShape SOUTH_AABB = Block.makeCuboidShape(0.0D, 8.0D, 7.0D, 16.0D, 16.0D, 16.0D);
 
-    public MantelTopCenter(Properties properties) {
+    public MantelTopCenterWithStocking(Properties properties) {
         super(properties);
     }
 
@@ -55,7 +53,7 @@ public class MantelTopCenter extends HorizontalDecoBlock {
         if (blockstate.getBlock() == this && blockstate1.getBlock() == ModBlocks.MANTEL_TOP_RIGHT.get()
                 || blockstate1.getBlock() == ModBlocks.MANTEL_TOP_RIGHT_STOCKING.get()
                 || blockstate.getBlock() == this && blockstate2.getBlock() == ModBlocks.MANTEL_TOP_RIGHT.get()
-        || blockstate2.getBlock() == ModBlocks.MANTEL_TOP_RIGHT_STOCKING.get() ){
+                || blockstate2.getBlock() == ModBlocks.MANTEL_TOP_RIGHT_STOCKING.get() ){
 
             worldIn.setBlockState(pos.north(), Blocks.AIR.getDefaultState(), 35);
             worldIn.setBlockState(pos.south(), Blocks.AIR.getDefaultState(), 35);
@@ -69,7 +67,7 @@ public class MantelTopCenter extends HorizontalDecoBlock {
                 || blockstate3.getBlock() == ModBlocks.MANTEL_TOP_RIGHT_STOCKING.get()
                 || blockstate.getBlock() == this && blockstate4.getBlock() == ModBlocks.MANTEL_TOP_RIGHT.get()
 
-        || blockstate4.getBlock() == ModBlocks.MANTEL_TOP_RIGHT_STOCKING.get()){
+                || blockstate4.getBlock() == ModBlocks.MANTEL_TOP_RIGHT_STOCKING.get()){
 
             worldIn.setBlockState(pos.east(), Blocks.AIR.getDefaultState(), 35);
             worldIn.setBlockState(pos.west(), Blocks.AIR.getDefaultState(), 35);
@@ -86,27 +84,4 @@ public class MantelTopCenter extends HorizontalDecoBlock {
         }
 
     }
-
-    @Override
-    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        ItemStack stocking = player.getHeldItem(handIn);
-
-        if (!worldIn.isRemote()) {
-
-
-
-            if (stocking.getItem() == ModItems.STOCKING.get()){
-
-                System.out.println("THE STOCKINGS WERE HUNG");
-                worldIn.setBlockState(pos, ModBlocks.MANTEL_TOP_MIDDLE_STOCKING.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));
-
-
-                stocking.shrink(1);
-            }
-
-        }
-
-      return true;
-    }
-
 }

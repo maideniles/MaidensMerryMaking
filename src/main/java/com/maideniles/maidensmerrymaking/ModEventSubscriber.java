@@ -1,17 +1,27 @@
 package com.maideniles.maidensmerrymaking;
 
 
+import com.maideniles.maidensmerrymaking.init.ModBlocks;
+import com.maideniles.maidensmerrymaking.init.ModItems;
 import com.maideniles.maidensmerrymaking.world.gen.PineTreeGen;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Random;
+
 @Mod.EventBusSubscriber(modid = MaidensMerryMaking.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber {
 
     private static final Logger LOGGER = LogManager.getLogger(MaidensMerryMaking.MODID + " Mod Event Subscriber");
+
+    private static final Random rand = new Random();
 
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
@@ -21,5 +31,9 @@ public final class ModEventSubscriber {
 
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
+
+
+
+
 
 }

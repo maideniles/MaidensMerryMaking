@@ -68,4 +68,6 @@ public class MantelBlock extends HorizontalDecoBlock {
         }
             worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
     }
+
+
 }
