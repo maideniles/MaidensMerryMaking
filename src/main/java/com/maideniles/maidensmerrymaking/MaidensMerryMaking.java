@@ -25,6 +25,8 @@ public final class MaidensMerryMaking {
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
 
+
+
     public MaidensMerryMaking() {
 
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -32,7 +34,6 @@ public final class MaidensMerryMaking {
         modEventBus.addListener(this::FMLLoadCompleteEvent);
 
         LOGGER.debug("Hello from Maiden's MerryMaking!");
-
 
 
 
@@ -69,4 +70,6 @@ public final class MaidensMerryMaking {
 
         }
     }
+
+
 }

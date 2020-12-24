@@ -1,0 +1,11 @@
+{
+    "variants": {
+        
+        "facing=north": {"model": "maidensmerrymaking:block/mantel_jungle_top_right_stocking", "y": 270},
+        "facing=south": {"model": "maidensmerrymaking:block/mantel_jungle_top_right_stocking", "y": 90}, 
+        "facing=west": {"model": "maidensmerrymaking:block/mantel_jungle_top_right_stocking", "y": 180  },
+        "facing=east": {"model": "maidensmerrymaking:block/mantel_jungle_top_right_stocking" , "y": 0 }
+        
+        
+   }
+}

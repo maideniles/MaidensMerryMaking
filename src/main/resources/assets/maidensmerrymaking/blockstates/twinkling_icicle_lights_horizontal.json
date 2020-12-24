@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "facing=north": {"model": "maidensmerrymaking:block/twinkling_icicle_lights_horizontal", "y": 270 },
+        "facing=east": {"model": "maidensmerrymaking:block/twinkling_icicle_lights_horizontal" },
+        "facing=south": {"model": "maidensmerrymaking:block/twinkling_icicle_lights_horizontal", "y": 90 },
+        "facing=west": {"model": "maidensmerrymaking:block/twinkling_icicle_lights_horizontal", "y": 180 }
+       
+    }
+}

@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Hand;
@@ -62,20 +63,13 @@ public class LampPostOn extends HorizontalDecoBlock {
 
         if (!worldIn.isRemote()) {
 
-
-
-
-            if(player.isSneaking() && player.getHeldItem(handIn).isEmpty()){
+            if(player.isSneaking() && torch.isEmpty()){
                 player.setHeldItem(handIn.MAIN_HAND, new ItemStack(Items.TORCH));
                 System.out.println("DARKNESS FALLS.");
                 worldIn.setBlockState(pos, ModBlocks.LAMP_POST.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));
-
-            }
-
-
-        }
-
-        return true;
+             }
+       }
+        return false;
     }
 
     @Override
@@ -85,7 +79,7 @@ public class LampPostOn extends HorizontalDecoBlock {
         BlockState blockstate1 = worldIn.getBlockState(pos.down());
 
 
-        if (blockstate.getBlock() == this && blockstate1.getBlock() == ModBlocks.LAMP_POST_POLE.get()) {
+        if (blockstate.getBlock() == this && blockstate1.getBlock() instanceof LampPostPole) {
 
             worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
             worldIn.setBlockState(pos.down(), ModBlocks.LAMP_POST.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));

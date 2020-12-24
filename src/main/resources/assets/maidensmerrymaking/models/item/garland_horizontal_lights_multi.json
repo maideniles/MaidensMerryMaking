@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "maidensmerrymaking:block/garland_horizontal_lights_multi"
-    }
-}

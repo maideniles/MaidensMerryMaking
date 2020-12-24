@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Hand;
@@ -58,26 +59,17 @@ public class LampPost extends HorizontalDecoBlock {
 
     @Override
     public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        ItemStack stocking = player.getHeldItem(handIn);
+        ItemStack torch = player.getHeldItem(handIn);
 
         if (!worldIn.isRemote()) {
 
-
-
-            if (stocking.getItem() == Items.TORCH){
-
+            if (torch.getItem() == Items.TORCH ) {
                 System.out.println("YOU LIGHT UP MY LIFE!");
                 worldIn.setBlockState(pos, ModBlocks.LAMP_POST_ON.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));
-
-
-                stocking.shrink(1);
+                torch.shrink(1);
             }
-
-
-
-        }
-
-        return true;
+       }
+        return false;
     }
 
     @Override
@@ -87,7 +79,8 @@ public class LampPost extends HorizontalDecoBlock {
         BlockState blockstate1 = worldIn.getBlockState(pos.down());
 
 
-        if (blockstate.getBlock() == this && blockstate1.getBlock() == ModBlocks.LAMP_POST_POLE.get()) {
+        if (blockstate.getBlock() == this && blockstate1.getBlock() instanceof LampPostPole)
+        {
 
             worldIn.setBlockState(pos, Blocks.AIR.getDefaultState());
             worldIn.setBlockState(pos.down(), ModBlocks.LAMP_POST.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));
