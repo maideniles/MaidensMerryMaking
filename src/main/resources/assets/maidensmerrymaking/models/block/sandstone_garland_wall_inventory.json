@@ -3,10 +3,10 @@
 	"parent": "block/block",
 	"ambientocclusion": false,
 	"textures": {
-		"5": "block/cobblestone",
+		"5": "block/sandstone",
 		"3_4": "maidensmerrymaking:block/fence_garland",
 		"6_1": "maidensmerrymaking:block/garland_bow",
-		"particle": "block/cobblestone"
+		"particle": "block/sandstone"
 	},
 	"elements": [
 		{

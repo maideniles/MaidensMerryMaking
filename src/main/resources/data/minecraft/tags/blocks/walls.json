@@ -1,7 +1,19 @@
 {
   "replace": false,
   "values": [
-    "maidensmerrymaking:cobblestone_garland_wall"
+     "maidensmerrymaking:cobblestone_garland_wall",
+    "maidensmerrymaking:brick_garland_wall",
+    "maidensmerrymaking:prismarine_garland_wall",
+    "maidensmerrymaking:red_sandstone_garland_wall",
+    "maidensmerrymaking:mossy_cobblestone_garland_wall",
+    "maidensmerrymaking:granite_garland_wall",
+    "maidensmerrymaking:stone_brick_garland_wall",
+    "maidensmerrymaking:nether_brick_garland_wall",
+    "maidensmerrymaking:andesite_garland_wall",
+    "maidensmerrymaking:red_nether_brick_garland_wall",
+    "maidensmerrymaking:sandstone_garland_wall",
+    "maidensmerrymaking:end_stone_garland_wall",
+    "maidensmerrymaking:diorite_garland_wall"
   
   ]
 }

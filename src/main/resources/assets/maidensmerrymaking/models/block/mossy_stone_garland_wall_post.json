@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"5": "block/cobblestone",
-		"particle": "block/cobblestone",
+		"5": "block/mossy_cobblestone",
+		"particle": "block/mossy_cobblestone",
 		"6_1": "maidensmerrymaking:block/garland_bow"
 	},
 	"elements": [
