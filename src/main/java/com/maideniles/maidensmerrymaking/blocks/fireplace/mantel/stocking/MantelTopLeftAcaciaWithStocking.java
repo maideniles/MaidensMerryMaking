@@ -12,7 +12,9 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -65,6 +67,20 @@ public class MantelTopLeftAcaciaWithStocking extends HorizontalDecoBlock {
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         Block block = state.getBlock();
         return block == ModBlocks.MANTEL_ACACIA_LEG_LEFT.get();
+    }
+
+    @Override
+    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        ItemStack stocking = player.getHeldItem(handIn);
+        if (!worldIn.isRemote()) {
+
+            if (player.isSneaking() && stocking.isEmpty()) {
+                player.setHeldItem(handIn.MAIN_HAND, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("STOCKING TO HAND.");
+                worldIn.setBlockState(pos, ModBlocks.MANTEL_ACACIA_TOP_LEFT.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));
+            }
+        }
+        return true;
     }
 
     @Override

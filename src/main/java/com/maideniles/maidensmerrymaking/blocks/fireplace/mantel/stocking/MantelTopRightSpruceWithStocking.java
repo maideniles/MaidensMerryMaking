@@ -12,7 +12,9 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -63,6 +65,20 @@ public class MantelTopRightSpruceWithStocking extends HorizontalDecoBlock {
     }
 
     @Override
+    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        ItemStack stocking = player.getHeldItem(handIn);
+        if (!worldIn.isRemote()) {
+
+            if (player.isSneaking() && stocking.isEmpty()) {
+                player.setHeldItem(handIn.MAIN_HAND, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("STOCKING TO HAND.");
+                worldIn.setBlockState(pos, ModBlocks.MANTEL_SPRUCE_TOP_RIGHT.get().getDefaultState().with(DIRECTION, state.get(DIRECTION)));
+            }
+        }
+        return true;
+    }
+
+    @Override
     public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
 
         BlockState blockstate = worldIn.getBlockState(pos);
@@ -72,18 +88,18 @@ public class MantelTopRightSpruceWithStocking extends HorizontalDecoBlock {
         BlockState blockstate3 = worldIn.getBlockState(pos.east());
         BlockState blockstate4 = worldIn.getBlockState(pos.west());
 
-        if (blockstate1.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get())
+        if (blockstate1.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get() || blockstate1.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE_STOCKING.get())
             ((MantelTopCenterSpruce)blockstate1.getBlock()).onBlockHarvested(worldIn, pos.north(), blockstate1, player);
 
-        else if (blockstate2.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get())
+        else if (blockstate2.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get() || blockstate1.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE_STOCKING.get())
             ((MantelTopCenterSpruce)blockstate2.getBlock()).onBlockHarvested(worldIn, pos.south(), blockstate2, player);
 
 
-        else if (blockstate3.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get())
+        else if (blockstate3.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get() || blockstate1.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE_STOCKING.get())
             ((MantelTopCenterSpruce)blockstate3.getBlock()).onBlockHarvested(worldIn, pos.east(), blockstate3, player);
 
 
-        else if (blockstate4.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get())
+        else if (blockstate4.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE.get() || blockstate1.getBlock() == ModBlocks.MANTEL_SPRUCE_TOP_MIDDLE_STOCKING.get())
             ((MantelTopCenterSpruce)blockstate4.getBlock()).onBlockHarvested(worldIn, pos.west(), blockstate4, player);
 
 

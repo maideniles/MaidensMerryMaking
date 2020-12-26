@@ -77,7 +77,7 @@ public class ChristmasTreeTopBlock extends BushBlock {
 
 
 
-            if (tree.getItem() == ModItems.CHRISTMAS_TREE_LIGHTS_WHITE.get()){
+            if (tree.getItem() == ModItems.MINI_LIGHTS_WHITE.get()){
 
                 System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
                 worldIn.setBlockState(pos, ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_TOP.get().getDefaultState());
@@ -93,7 +93,7 @@ public class ChristmasTreeTopBlock extends BushBlock {
 
 
 
-            if (tree.getItem() == ModItems.CHRISTMAS_TREE_LIGHTS_MULTI.get()){
+            if (tree.getItem() == ModItems.MINI_LIGHTS_MULTI.get()){
 
                 System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
                 worldIn.setBlockState(pos, ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_TOP.get().getDefaultState());

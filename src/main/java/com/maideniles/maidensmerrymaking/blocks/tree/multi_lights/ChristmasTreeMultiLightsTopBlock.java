@@ -69,7 +69,47 @@ public class ChristmasTreeMultiLightsTopBlock extends BushBlock {
     }
 
 
+    @Override
+    public boolean onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        ItemStack tree = player.getHeldItem(handIn);
+        BlockState blockstate = worldIn.getBlockState(pos.up());
 
+
+        if (tree.getItem() == ModItems.STAR.get()){
+
+            System.out.println("YOU MUST BE MY LUCKY STAR!");
+            worldIn.setBlockState(pos.up(), ModBlocks.STAR_TOPPER.get().getDefaultState());
+            //  worldIn.setBlockState(pos.add(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get().getDefaultState());
+            //   worldIn.setBlockState(pos.add(0,-2,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().getDefaultState());
+
+            tree.shrink(1);
+        }
+
+        if (tree.getItem() == ModItems.BOW.get()){
+
+            System.out.println("TOPPED WITH A BOW!");
+            worldIn.setBlockState(pos.up(), ModBlocks.BOW_TOPPER.get().getDefaultState());
+
+            tree.shrink(1);
+        }
+
+        if(player.isSneaking() && tree.isEmpty() && blockstate.getBlock() == ModBlocks.BOW_TOPPER.get()){
+            player.setHeldItem(handIn.MAIN_HAND, new ItemStack(ModItems.BOW.get()));
+            System.out.println("BOW DOWN.");
+            worldIn.setBlockState(pos.up(), Blocks.AIR.getDefaultState());
+        }
+
+        if(player.isSneaking() && tree.isEmpty() && blockstate.getBlock() == ModBlocks.STAR_TOPPER.get()){
+            player.setHeldItem(handIn.MAIN_HAND, new ItemStack(ModItems.STAR.get()));
+            System.out.println("STARLIGHT STARBRIGHT");
+            worldIn.setBlockState(pos.up(), Blocks.AIR.getDefaultState());
+        }
+
+
+
+
+        return true;
+    }
 
     /**
      * Gets the render layer this block will render on. SOLID for solid blocks, CUTOUT or CUTOUT_MIPPED for on-off
