@@ -928,6 +928,10 @@ public static final RegistryObject<Block>   MANTEL_ACACIA_TOP_LEFT = createBlock
             () -> new LightsBlock(Block.Properties.create(Material.PLANTS).hardnessAndResistance(0.5F, 2.0F).harvestLevel(1).lightValue(10).sound(SoundType.PLANT)
                     .lightValue(14)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+//GARLAND DECORATED WALLS
+
+    public static final RegistryObject<Block> COBBLESTONE_GARLAND_WALL = createBlock("cobblestone_garland_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
 
 
