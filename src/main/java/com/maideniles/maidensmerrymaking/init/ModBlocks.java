@@ -963,11 +963,94 @@ public static final RegistryObject<Block>   MANTEL_ACACIA_TOP_LEFT = createBlock
     public static final RegistryObject<Block> SANDSTONE_GARLAND_WALL = createBlock("sandstone_garland_wall",
             () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
-    public static final RegistryObject<Block> END_STONE_GARLAND_WALL = createBlock("end_stone_garland_wall",
+    public static final RegistryObject<Block> END_STONE_GARLAND_WALL = createBlock("end_stone_brick_garland_wall",
             () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> DIORITE_GARLAND_WALL = createBlock("diorite_garland_wall",
             () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GARLAND_LIGHTS DECORATED WALLS//
+
+    public static final RegistryObject<Block> COBBLESTONE_GARLAND_LIGHTS_WALL = createBlock("cobblestone_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> BRICK_GARLAND_LIGHTS_WALL = createBlock("brick_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> PRISMARINE_GARLAND_LIGHTS_WALL = createBlock("prismarine_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> RED_SANDSTONE_GARLAND_LIGHTS_WALL = createBlock("red_sandstone_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> MOSSY_COBBLESTONE_GARLAND_LIGHTS_WALL = createBlock("mossy_cobblestone_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> GRANITE_GARLAND_LIGHTS_WALL = createBlock("granite_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> STONE_BRICK_GARLAND_LIGHTS_WALL = createBlock("stone_brick_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> NETHER_BRICK_GARLAND_LIGHTS_WALL = createBlock("nether_brick_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> ANDESITE_GARLAND_LIGHTS_WALL = createBlock("andesite_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> RED_NETHER_BRICK_GARLAND_LIGHTS_WALL = createBlock("red_nether_brick_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> SANDSTONE_GARLAND_LIGHTS_WALL = createBlock("sandstone_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> END_STONE_GARLAND_LIGHTS_WALL = createBlock("end_stone_brick_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> DIORITE_GARLAND_LIGHTS_WALL = createBlock("diorite_garland_lights_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    //GARLAND_MULTI DECORATED WALLS//
+
+    public static final RegistryObject<Block> COBBLESTONE_GARLAND_MULTI_WALL = createBlock("cobblestone_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> BRICK_GARLAND_MULTI_WALL = createBlock("brick_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> PRISMARINE_GARLAND_MULTI_WALL = createBlock("prismarine_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> RED_SANDSTONE_GARLAND_MULTI_WALL = createBlock("red_sandstone_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> MOSSY_COBBLESTONE_GARLAND_MULTI_WALL = createBlock("mossy_cobblestone_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> GRANITE_GARLAND_MULTI_WALL = createBlock("granite_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> STONE_BRICK_GARLAND_MULTI_WALL = createBlock("stone_brick_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> NETHER_BRICK_GARLAND_MULTI_WALL = createBlock("nether_brick_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> ANDESITE_GARLAND_MULTI_WALL = createBlock("andesite_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> RED_NETHER_BRICK_GARLAND_MULTI_WALL = createBlock("red_nether_brick_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> SANDSTONE_GARLAND_MULTI_WALL = createBlock("sandstone_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> END_STONE_GARLAND_MULTI_WALL = createBlock("end_stone_brick_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> DIORITE_GARLAND_MULTI_WALL = createBlock("diorite_garland_multi_wall",
+            () -> new GarlandWallBlock(Block.Properties.from(Blocks.BRICK_WALL).lightValue(10)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
 
 }

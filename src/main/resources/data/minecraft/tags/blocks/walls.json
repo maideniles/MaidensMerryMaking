@@ -13,7 +13,35 @@
     "maidensmerrymaking:red_nether_brick_garland_wall",
     "maidensmerrymaking:sandstone_garland_wall",
     "maidensmerrymaking:end_stone_garland_wall",
-    "maidensmerrymaking:diorite_garland_wall"
+    "maidensmerrymaking:diorite_garland_wall",
+	
+	"maidensmerrymaking:cobblestone_garland_lights_wall",
+    "maidensmerrymaking:brick_garland_lights_wall",
+    "maidensmerrymaking:prismarine_garland_lights_wall",
+    "maidensmerrymaking:red_sandstone_garland_lights_wall",
+    "maidensmerrymaking:mossy_cobblestone_garland_lights_wall",
+    "maidensmerrymaking:granite_garland_lights_wall",
+    "maidensmerrymaking:stone_brick_garland_lights_wall",
+    "maidensmerrymaking:nether_brick_garland_lights_wall",
+    "maidensmerrymaking:andesite_garland_lights_wall",
+    "maidensmerrymaking:red_nether_brick_garland_lights_wall",
+    "maidensmerrymaking:sandstone_garland_lights_wall",
+    "maidensmerrymaking:end_stone_garland_lights_wall",
+    "maidensmerrymaking:diorite_garland_lights_wall",
+	
+	"maidensmerrymaking:cobblestone_garland_multi_wall",
+    "maidensmerrymaking:brick_garland_multi_wall",
+    "maidensmerrymaking:prismarine_garland_multi_wall",
+    "maidensmerrymaking:red_sandstone_garland_multi_wall",
+    "maidensmerrymaking:mossy_cobblestone_garland_multi_wall",
+    "maidensmerrymaking:granite_garland_multi_wall",
+    "maidensmerrymaking:stone_brick_garland_multi_wall",
+    "maidensmerrymaking:nether_brick_garland_multi_wall",
+    "maidensmerrymaking:andesite_garland_multi_wall",
+    "maidensmerrymaking:red_nether_brick_garland_multi_wall",
+    "maidensmerrymaking:sandstone_garland_multi_wall",
+    "maidensmerrymaking:end_stone_garland_multi_wall",
+    "maidensmerrymaking:diorite_garland_multi_wall"
   
   ]
 }

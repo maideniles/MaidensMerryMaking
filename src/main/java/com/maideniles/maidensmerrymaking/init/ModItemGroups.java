@@ -26,6 +26,6 @@ public class ModItemGroups {
 
     }
 
-    public static final ItemGroup MAIDENS_BLOCKS_GROUP = new ModItemGroup("maidens_blocks", () -> new ItemStack(Blocks.GOLD_BLOCK));
-    public static final ItemGroup MAIDENS_ITEMS_GROUP = new ModItemGroup("maidens_items", () -> new ItemStack(Items.ENCHANTED_GOLDEN_APPLE));
+    public static final ItemGroup MAIDENS_BLOCKS_GROUP = new ModItemGroup("maidens_blocks", () -> new ItemStack(ModBlocks.BirchWreathLightsWhiteDoor.get()));
+    public static final ItemGroup MAIDENS_ITEMS_GROUP = new ModItemGroup("maidens_items", () -> new ItemStack(ModItems.BOW.get()));
 }

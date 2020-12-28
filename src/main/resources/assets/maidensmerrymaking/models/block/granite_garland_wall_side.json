@@ -11,6 +11,7 @@
 			"name": "wall",
 			"from": [5, 0, 0],
 			"to": [11, 14, 8],
+			"shade": false,
 			"faces": {
 				"north": {"uv": [5, 2, 11, 16], "texture": "#5", "cullface": "north"},
 				"east": {"uv": [8, 2, 16, 16], "texture": "#5"},
@@ -24,6 +25,7 @@
 			"name": "garland",
 			"from": [3.4, 0, 0],
 			"to": [3.4, 16, 8],
+			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [5, 8, 8]},
 			"faces": {
 				"north": {"uv": [0, 0, 0, 16], "texture": "#3_4"},
